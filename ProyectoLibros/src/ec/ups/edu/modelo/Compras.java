@@ -6,57 +6,89 @@ import java.util.List;
 
 public class Compras {
 	private int codigo;
-	private Date fecha;
-	private List<LibroDigital>libDigital;
-	private List<LibroImpreso>libImpreso;
-	
+	private String fecha;
+	private List<LibroDigital>listlibDigital;
+	private List<LibroImpreso>listlibImpreso;
+	private Cliente cliente;
 	public Compras() {
 		
 	}
-	public Compras(int codigo, Date fecha, List<LibroDigital> libDigital, List<LibroImpreso> libImpreso) {
+	
+	public Compras(int codigo, String fecha, List<LibroDigital> listlibDigital, List<LibroImpreso> listlibImpreso,
+			Cliente cliente) {
 		
 		this.codigo = codigo;
 		this.fecha = fecha;
-		this.libDigital = new ArrayList<LibroDigital>();
-		this.libImpreso = new ArrayList<LibroImpreso>();
+		this.listlibDigital = listlibDigital;
+		this.listlibImpreso = listlibImpreso;
+		this.cliente = cliente;
 	}
+
 	public int getCodigo() {
 		return codigo;
 	}
+
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-	public Date getFecha() {
+
+	public String getFecha() {
 		return fecha;
 	}
-	public void setFecha(Date fecha) {
+
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
-	public List<LibroDigital> getLibDigital() {
-		return libDigital;
+
+	public List<LibroDigital> getListlibDigital() {
+		return listlibDigital;
 	}
-	public void setLibDigital(List<LibroDigital> libDigital) {
-		this.libDigital = libDigital;
+
+	public void setListlibDigital(List<LibroDigital> listlibDigital) {
+		this.listlibDigital = listlibDigital;
 	}
-	public List<LibroImpreso> getLibImpreso() {
-		return libImpreso;
+
+	public List<LibroImpreso> getListlibImpreso() {
+		return listlibImpreso;
 	}
-	public void setLibImpreso(List<LibroImpreso> libImp) {
-		this.libImpreso = libImp;
+
+	public void setListlibImpreso(List<LibroImpreso> listlibImpreso) {
+		this.listlibImpreso = listlibImpreso;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
 	public void agregarlibImpreso(LibroImpreso libImpreso) {
-		this.getLibImpreso().add(libImpreso);
+		this.getListlibImpreso().add(libImpreso);
 	}
 	public void agregarlibDigital(LibroDigital libDigital) {
-		this.agregarlibDigital(libDigital);
+		this.getListlibDigital().add(libDigital);
 	}
-	public List<LibroImpreso> listarLibroImpreso() {
-		// TODO Auto-generated method stub
-		List<LibroImpreso> libImpresos = new ArrayList<>();
-		for (LibroImpreso libros:libImpresos) {
-			System.out.println(libros);
+	
+	public double devitarSaldo() {
+		double total=this.getCliente().getCreditos().getTotalCreditos();
+		for (int i = 0; i < this.getListlibDigital().size(); i++) {
+			
+			
 		}
-		return libImpresos;
+		
+		return total;
+	}
+	@Override
+	public String toString() {
+		return "Compras [codigo=" + codigo + ", fecha=" + fecha + ", listlibDigital=" + listlibDigital
+				+ ", listlibImpreso=" + listlibImpreso + ", cliente=" + cliente + "]";
+	}
+	public List<Cliente> listarComprar (){
+		  
+		return null;
+		
 	}
 	
 }
