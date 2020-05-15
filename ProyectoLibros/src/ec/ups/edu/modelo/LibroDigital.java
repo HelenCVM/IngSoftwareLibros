@@ -11,18 +11,18 @@ public class LibroDigital  extends Libro{
 				return comision;
 	}
 	@Override
-	public double Precio() {
+	public double precio() {
 		double precio=this.getPrecio();
 		
 		return precio;
 	}
 	@Override
-	public double calcularcomisionIva() {
+	public double calcularComisionIva() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	@Override
-	public double CostoEnvio() {
+	public double costoEnvio() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

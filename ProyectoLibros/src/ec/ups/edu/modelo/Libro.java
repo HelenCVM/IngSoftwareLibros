@@ -80,13 +80,13 @@ public  abstract class  Libro {
 
 
 	public double calcularPrecioFinal() {
-		return calcularComision() + Precio()+CostoEnvio()+calcularcomisionIva();
+		return calcularComision() + precio()+costoEnvio()+calcularComisionIva();
 		
 	}
 	public abstract  double calcularComision();
-	public abstract double Precio();
-	public abstract double calcularcomisionIva();
-	public abstract double CostoEnvio();
+	public abstract double precio();
+	public abstract double calcularComisionIva();
+	public abstract double costoEnvio();
 	
 	
 	

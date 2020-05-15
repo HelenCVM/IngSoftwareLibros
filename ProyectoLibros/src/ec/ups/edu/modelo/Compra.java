@@ -92,10 +92,7 @@ public class Compra {
 		return "Compras [codigo=" + codigo + ", fecha=" + fecha + ", listlibDigital=" + listlibDigital
 				+ ", listlibImpreso=" + listlibImpreso + ", cliente=" + cliente + "]";
 	}
-	public List<Cliente> listarComprar (){
-		  
-		return null;
-		
-	}
+	
+	
 	
 }

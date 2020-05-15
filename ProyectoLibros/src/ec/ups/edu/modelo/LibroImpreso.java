@@ -20,13 +20,13 @@ public class LibroImpreso  extends Libro {
 		return 0;
 	}
 	@Override
-	public double Precio() {
+	public double precio() {
 		double precio=this.getPrecio();
 		
 		return precio;
 	}
 	@Override
-	public double calcularcomisionIva() {
+	public double calcularComisionIva() {
 		double iva=this.getComision();
 		double pre=this.getPrecio();
 		double total=(iva+pre)/100;
@@ -34,7 +34,7 @@ public class LibroImpreso  extends Libro {
 		return total;
 	}
 	@Override
-	public double CostoEnvio() {
+	public double costoEnvio() {
 		double costoenvio= this.getGastoenvio();
 		
 		return costoenvio;

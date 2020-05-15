@@ -101,6 +101,8 @@ public class main {
 			 * Agregando Creditos al Cliente
 			 */
 			System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++Agregado datos al Credito del cliente+++++++++++++++++++++++++++");
+			
+		
 			Credito s= new Credito(1, "12/12/2019",10,15);
 			cliente.setCreditos(s);
 			System.out.println("El cliente tiene  este interes: " +cliente.getCreditos().getInteres());
@@ -138,7 +140,7 @@ public class main {
 			 
 			 System.out.println("\nTotal precio de libro Impreso :"+ libImpreso.calcularPrecioFinal()+"  Del libro : "+libImpreso.toString()+" Costo envio:"+libImpreso.getGastoenvio());
 			 System.out.println("Total precio de libro Impreso :"+ libImpreso1.calcularPrecioFinal()+"  Del libro : "+libImpreso1.toString()+" Costo envio:"+libImpreso1.getGastoenvio());
-				
+		
 	}
 
 }
