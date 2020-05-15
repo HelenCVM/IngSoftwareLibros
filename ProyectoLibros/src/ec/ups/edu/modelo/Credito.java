@@ -1,12 +1,12 @@
 package ec.ups.edu.modelo;
 
-public class Creditos {
+public class Credito {
 	public int id;
 	public String plazo;
 	public double interes;
 	public double totalCreditos;
 
-	public Creditos(int id, String plazo, double interes, double totalCreditos) {
+	public Credito(int id, String plazo, double interes, double totalCreditos) {
 
 		this.id = id;
 		this.plazo = plazo;

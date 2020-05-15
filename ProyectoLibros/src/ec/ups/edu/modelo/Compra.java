@@ -4,82 +4,89 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Compras {
+public class Compra {
 	private int codigo;
 	private String fecha;
 	private List<LibroDigital>listlibDigital;
 	private List<LibroImpreso>listlibImpreso;
 	private Cliente cliente;
-	public Compras() {
-		
-	}
 	
-	public Compras(int codigo, String fecha, List<LibroDigital> listlibDigital, List<LibroImpreso> listlibImpreso,
-			Cliente cliente) {
+	public Compra(int codigo, String fecha, Cliente cliente) {
 		
 		this.codigo = codigo;
 		this.fecha = fecha;
-		this.listlibDigital = listlibDigital;
-		this.listlibImpreso = listlibImpreso;
 		this.cliente = cliente;
+		this.listlibDigital= new ArrayList<LibroDigital>();
+		this.listlibImpreso=new ArrayList<LibroImpreso>();
 	}
+
 
 	public int getCodigo() {
 		return codigo;
 	}
 
+
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+
 
 	public String getFecha() {
 		return fecha;
 	}
 
+
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
+
 
 	public List<LibroDigital> getListlibDigital() {
 		return listlibDigital;
 	}
 
+
 	public void setListlibDigital(List<LibroDigital> listlibDigital) {
 		this.listlibDigital = listlibDigital;
 	}
+
 
 	public List<LibroImpreso> getListlibImpreso() {
 		return listlibImpreso;
 	}
 
+
 	public void setListlibImpreso(List<LibroImpreso> listlibImpreso) {
 		this.listlibImpreso = listlibImpreso;
 	}
+
 
 	public Cliente getCliente() {
 		return cliente;
 	}
 
+
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
 
-	public void agregarlibImpreso(LibroImpreso libImpreso) {
-		this.getListlibImpreso().add(libImpreso);
-	}
-	public void agregarlibDigital(LibroDigital libDigital) {
-		this.getListlibDigital().add(libDigital);
-	}
-	
-	public double devitarSaldo() {
-		double total=this.getCliente().getCreditos().getTotalCreditos();
-		for (int i = 0; i < this.getListlibDigital().size(); i++) {
+
+	public LibroImpreso agregarlibImpreso(LibroImpreso libImpreso) {
+			libImpreso.toString();
+			this.getListlibImpreso().add(libImpreso);
+			return libImpreso;
 			
-			
-		}
 		
-		return total;
 	}
+	public LibroDigital agregarlibDigital(LibroDigital libDigital) {
+		libDigital.toString();
+		this.getListlibDigital().add(libDigital);
+		return libDigital;
+		
+	
+}
+		
+	
 	@Override
 	public String toString() {
 		return "Compras [codigo=" + codigo + ", fecha=" + fecha + ", listlibDigital=" + listlibDigital

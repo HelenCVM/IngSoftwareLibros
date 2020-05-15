@@ -4,7 +4,7 @@ public class Cliente {
 	public String cedula;
 	public String nombre;
 	public String apellido;
-	public Creditos creditos;
+	public Credito creditos;
 	
 	public Cliente() {
 		
@@ -49,12 +49,12 @@ public class Cliente {
 	}
 
 
-	public Creditos getCreditos() {
+	public Credito getCreditos() {
 		return creditos;
 	}
 
 
-	public void setCreditos(Creditos creditos) {
+	public void setCreditos(Credito creditos) {
 		this.creditos = creditos;
 	}
 
